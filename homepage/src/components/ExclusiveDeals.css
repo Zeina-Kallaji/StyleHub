@@ -1,4 +1,4 @@
-/* Section wrapper */
+/* Section wrapper - responsive */
 .exclusive-deals {
   display: flex;
   flex-direction: column;
@@ -57,38 +57,39 @@
   border-radius: 4px;
 }
 
-/* Promotion card */
+/* Promotion card - responsive */
 .exclusive-deals__card {
   position: relative;
   width: 100%;
-  height: 180px;
+  min-height: 180px;
+  height: clamp(160px, 45vw, 180px);  /* scales with viewport */
   border-radius: 20px;
   background: #5826b2;
   box-shadow: 0px 0px 10px 0px #00000014;
   overflow: hidden;
 }
 
-/* Left content block */
+/* Left content block - responsive positioning */
 .exclusive-deals__content {
   position: absolute;
-  top: 35px;
-  left: 30px;
-  width: 195px;
+  top: min(35px, 6vw);
+  left: min(30px, 6vw);
+  width: min(195px, 48%);
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: clamp(20px, 5vw, 32px);
 }
 
 .exclusive-deals__promo-text {
   font-family: "Nunito", system-ui, sans-serif;
   font-weight: 800;
-  font-size: 18px;
+  font-size: clamp(14px, 4vw, 18px);
   line-height: 120%;
   color: #f4f4e4;
   margin: 0;
 }
 
-/* Book Now button */
+/* Book Now button - responsive */
 .exclusive-deals__book-btn {
   all: unset;
   cursor: pointer;
@@ -96,8 +97,8 @@
   align-items: center;
   justify-content: center;
   gap: 6px;
-  width: 113px;
-  height: 34px;
+  width: min(113px, 100%);
+  height: clamp(30px, 8vw, 34px);
   border-radius: 28px;
   background: #9c6cfc;
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -108,7 +109,7 @@
 .exclusive-deals__book-text {
   font-family: "Nunito", system-ui, sans-serif;
   font-weight: 700;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   line-height: 120%;
   letter-spacing: 0;
   color: #ffffff;
@@ -118,8 +119,8 @@
 }
 
 .exclusive-deals__book-arrow {
-  width: 20px;   /* spec: 19.999... rounds to 20px */
-  height: 20px;
+  width: clamp(16px, 4vw, 20px);
+  height: clamp(16px, 4vw, 20px);
   display: block;
   flex-shrink: 0;
 }
@@ -129,13 +130,28 @@
   outline-offset: 2px;
 }
 
-/* Salon image */
+/* Salon image - responsive */
 .exclusive-deals__image {
   position: absolute;
-  top: 8px;
-  right: 7px;
-  width: 161px;
-  height: 165px;
+  top: min(8px, 2vw);
+  right: min(7px, 2vw);
+  width: min(161px, 42%);
+  height: min(165px, 90%);
   object-fit: cover;
   border-radius: 15px;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 320px) {
+  .exclusive-deals__card {
+    min-height: 140px;
+  }
+  
+  .exclusive-deals__promo-text {
+    font-size: 13px;
+  }
+  
+  .exclusive-deals__book-text {
+    font-size: 11px;
+  }
 }

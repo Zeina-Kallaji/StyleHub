@@ -1,12 +1,11 @@
-/* Bottom navigation bar
-   Fixed to bottom, full width, white background with top border */
+/* Bottom navigation bar - responsive across all mobile sizes */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   width: 100%;
-  max-width: 440px;
+  max-width: 100%;  /* full width on all devices */
   margin: 0 auto;
   height: 85px;
   display: flex;
@@ -24,10 +23,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;  /* align items to top, text naturally aligns on same baseline */
+  justify-content: flex-start;
   gap: 8px;
-  width: 97px;
-  padding-top: 12px;  /* vertical centering within 85px bar */
+  flex: 1;  /* distribute space evenly */
+  max-width: 97px;
+  padding-top: 12px;
 }
 
 
@@ -56,13 +56,13 @@
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
-  color: #b6b8bd;  /* inactive gray */
+  color: #b6b8bd;
   white-space: nowrap;
 }
 
 /* Active label */
 .bottom-nav__item--active .bottom-nav__label {
-  color: #5826b2;  /* active purple */
+  color: #5826b2;
 }
 
 /* Focus ring */
@@ -70,4 +70,16 @@
   outline: 2px solid #5826b2;
   outline-offset: 2px;
   border-radius: 8px;
+}
+
+/* Responsive adjustments for very small screens */
+@media (max-width: 320px) {
+  .bottom-nav__label {
+    font-size: 12px;
+  }
+  
+  .bottom-nav__icon {
+    width: 22px;
+    height: 22px;
+  }
 }

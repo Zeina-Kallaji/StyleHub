@@ -1,5 +1,4 @@
-/* Section wrapper
-   top:636 - (PopularCategories approx top:589 + height:121) = ~26px gap */
+/* Section wrapper - responsive */
 .highest-rated {
   display: flex;
   flex-direction: column;
@@ -57,21 +56,24 @@
   border-radius: 4px;
 }
 
-/* Cards row */
+/* Cards row - responsive */
 .highest-rated__list {
   display: flex;
   gap: 12px;
   width: 100%;
+  overflow-x: auto;  /* allow horizontal scroll on very small screens */
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Each card */
+/* Each card - flexible width */
 .highest-rated__card {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  width: 196px;
+  flex: 1;
+  min-width: 160px;  /* minimum width for readability */
+  max-width: 196px;
   height: 227px;
-  flex-shrink: 0;
   padding: 12px;
   border-radius: 24px;
   background: #f6f6f6;
@@ -79,10 +81,11 @@
   box-sizing: border-box;
 }
 
-/* Image wrapper contains image + fav heart overlay */
+/* Image wrapper */
 .highest-rated__image-wrapper {
   position: relative;
-  width: 172px;
+  width: 100%;
+  max-width: 172px;
   height: 132px;
   flex-shrink: 0;
 }
@@ -96,7 +99,7 @@
   display: block;
 }
 
-/* Favorite heart button top-right overlay */
+/* Favorite heart button */
 .highest-rated__fav-btn {
   all: unset;
   cursor: pointer;
@@ -124,20 +127,19 @@
   outline-offset: 2px;
 }
 
-/* Card content: name, rating, arrow */
+/* Card content */
 .highest-rated__content {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   width: 100%;
-  height: 59px;
 }
 
-/* Left side: name + rating */
 .highest-rated__info {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
 }
 
 .highest-rated__name {
@@ -146,7 +148,7 @@
   font-size: 12px;
   line-height: 100%;
   letter-spacing: 0;
-  color: rgba(34, 34, 34, 0.8);  /* #222222CC */
+  color: rgba(34, 34, 34, 0.8);
   margin: 0;
 }
 
@@ -195,4 +197,11 @@
 .highest-rated__arrow-btn:focus-visible {
   outline: 2px solid #5826b2;
   outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 360px) {
+  .highest-rated__card {
+    min-width: 140px;
+  }
 }
