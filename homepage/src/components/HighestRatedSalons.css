@@ -79,7 +79,7 @@
   box-sizing: border-box;
 }
 
-/* Image wrapper — contains image + fav heart overlay */
+/* Image wrapper ï¿½ contains image + fav heart overlay */
 .highest-rated__image-wrapper {
   position: relative;
   width: 172px;
@@ -96,7 +96,7 @@
   display: block;
 }
 
-/* Favorite heart button — top-right overlay */
+/* Favorite heart button ï¿½ top-right overlay */
 .highest-rated__fav-btn {
   all: unset;
   cursor: pointer;

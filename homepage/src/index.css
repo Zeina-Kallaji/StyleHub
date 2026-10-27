@@ -28,7 +28,7 @@
 }
 
 html {
-  /* Force scrollbar gutter to always reserve space — prevents layout shift */
+  /* Force scrollbar gutter to always reserve space ï¿½ prevents layout shift */
   overflow-y: scroll;
 }
 

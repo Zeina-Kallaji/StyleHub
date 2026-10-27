@@ -1,6 +1,6 @@
 /* Section wrapper
    Gap from ExclusiveDeals: Figma top:468 - (top:207 + height:214) = 47px
-   But visually the design shows ~24px — using 24px to match screenshot */
+   But visually the design shows ~24px ï¿½ using 24px to match screenshot */
 .popular-categories {
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
   border-radius: 4px;
 }
 
-/* Icons row — justify between so 5 items spread evenly across full width */
+/* Icons row ï¿½ justify between so 5 items spread evenly across full width */
 .popular-categories__list {
   display: flex;
   align-items: flex-start;
