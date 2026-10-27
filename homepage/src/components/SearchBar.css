@@ -1,0 +1,79 @@
+.searchbar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 16px;
+  margin-top: 11px;
+}
+
+/* Search input wrapper */
+.searchbar__input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;              /* fills available width instead of fixed 346px */
+  height: 50px;
+  padding: 0 16px;
+  background: #f8f8f8;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+}
+
+.searchbar__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.searchbar__input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #08060d;
+  outline: none;
+  line-height: 1;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.searchbar__input::placeholder {
+  color: #aeaeae;
+}
+
+.searchbar__input::-webkit-search-cancel-button,
+.searchbar__input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Sort button */
+.searchbar__sort-btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 20px;
+}
+
+.searchbar__sort-btn img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* Focus rings */
+.searchbar__input-wrapper:focus-within {
+  outline: 2px solid #5826b2;
+  outline-offset: 1px;
+}
+
+.searchbar__sort-btn:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+  border-radius: 20px;
+}

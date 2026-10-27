@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 0 16px;  /* reduced from 76px to 16px for mobile viewport */
+  background-color: #ffffff;
+}
+
+.header__logo {
+  width: 169.63px;
+  height: 37px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.header__notifications-btn {
+  /* Reset button defaults */
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  /* The SVG asset already includes the 50x50 rounded square with border,
+     so we just size the wrapper to match */
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+}
+
+.header__notifications-btn img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* Focus ring for accessibility */
+.header__notifications-btn:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+  border-radius: 20px;
+}

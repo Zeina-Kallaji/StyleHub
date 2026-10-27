@@ -1,0 +1,73 @@
+/* Bottom navigation bar
+   Fixed to bottom, full width, white background with top border */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #ffffff;
+  border-top: 1px solid #e5e5ea;
+  z-index: 100;
+}
+
+/* Each nav item */
+.bottom-nav__item {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  /* align items to top, text naturally aligns on same baseline */
+  gap: 8px;
+  width: 97px;
+  padding-top: 12px;  /* vertical centering within 85px bar */
+}
+
+/* Icon — 26×26 */
+.bottom-nav__icon {
+  width: 26px;
+  height: 26px;
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Inactive state: gray #B6B8BD */
+.bottom-nav__item:not(.bottom-nav__item--active) .bottom-nav__icon {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(6%) saturate(171%) hue-rotate(202deg) brightness(92%) contrast(88%);
+}
+
+/* Active state: exact purple #5826B2 */
+.bottom-nav__item--active .bottom-nav__icon {
+  filter: brightness(0) saturate(100%) invert(23%) sepia(72%) saturate(2692%) hue-rotate(258deg) brightness(92%) contrast(98%);
+}
+
+/* Label */
+.bottom-nav__label {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  color: #b6b8bd;  /* inactive gray */
+  white-space: nowrap;
+}
+
+/* Active label */
+.bottom-nav__item--active .bottom-nav__label {
+  color: #5826b2;  /* active purple */
+}
+
+/* Focus ring */
+.bottom-nav__item:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+  border-radius: 8px;
+}

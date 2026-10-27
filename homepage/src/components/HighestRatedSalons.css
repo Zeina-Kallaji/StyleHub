@@ -1,0 +1,198 @@
+/* Section wrapper
+   top:636 - (PopularCategories approx top:589 + height:121) = ~26px gap */
+.highest-rated {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  margin-top: 26px;
+  padding: 0 16px;
+}
+
+/* Header row */
+.highest-rated__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+}
+
+.highest-rated__title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #222222;
+  margin: 0;
+}
+
+/* See All button */
+.highest-rated__see-all {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 18px;
+}
+
+.highest-rated__see-all-text {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 100%;
+  color: #5826b2;
+}
+
+.highest-rated__see-all-arrow {
+  width: 7px;
+  height: 12px;
+  display: block;
+}
+
+.highest-rated__see-all:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Cards row */
+.highest-rated__list {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+/* Each card */
+.highest-rated__card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 196px;
+  height: 227px;
+  flex-shrink: 0;
+  padding: 12px;
+  border-radius: 24px;
+  background: #f6f6f6;
+  border: 1px solid #e6e6e6;
+  box-sizing: border-box;
+}
+
+/* Image wrapper — contains image + fav heart overlay */
+.highest-rated__image-wrapper {
+  position: relative;
+  width: 172px;
+  height: 132px;
+  flex-shrink: 0;
+}
+
+.highest-rated__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  display: block;
+}
+
+/* Favorite heart button — top-right overlay */
+.highest-rated__fav-btn {
+  all: unset;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 1px 8px 0px #0000000d;
+}
+
+.highest-rated__fav-btn img {
+  width: 17px;
+  height: 15px;
+  display: block;
+}
+
+.highest-rated__fav-btn:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+}
+
+/* Card content: name, rating, arrow */
+.highest-rated__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 59px;
+}
+
+/* Left side: name + rating */
+.highest-rated__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.highest-rated__name {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: rgba(34, 34, 34, 0.8);  /* #222222CC */
+  margin: 0;
+}
+
+.highest-rated__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.highest-rated__star {
+  width: 17px;
+  height: 17px;
+  display: block;
+}
+
+.highest-rated__rating-value {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  color: #383838;
+}
+
+/* Right arrow button */
+.highest-rated__arrow-btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  flex-shrink: 0;
+}
+
+.highest-rated__arrow-btn img {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.highest-rated__arrow-btn:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+}

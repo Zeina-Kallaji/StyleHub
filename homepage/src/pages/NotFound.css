@@ -1,0 +1,41 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  gap: 12px;
+  padding: 24px;
+  padding-bottom: 109px;  /* 24px + 85px bottom nav */
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.not-found__title {
+  font-size: 72px;
+  font-weight: 700;
+  color: #5826b2;
+  margin: 0;
+}
+
+.not-found__message {
+  font-size: 16px;
+  color: #6b6375;
+  margin: 0;
+}
+
+.not-found__back-btn {
+  margin-top: 8px;
+  padding: 12px 24px;
+  background-color: #5826b2;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.not-found__back-btn:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+}

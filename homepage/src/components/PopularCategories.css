@@ -1,0 +1,116 @@
+/* Section wrapper
+   Gap from ExclusiveDeals: Figma top:468 - (top:207 + height:214) = 47px
+   But visually the design shows ~24px — using 24px to match screenshot */
+.popular-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 24px;
+  padding: 0 16px;
+}
+
+/* Header row */
+.popular-categories__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+}
+
+.popular-categories__title {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #222222;
+  margin: 0;
+}
+
+/* See All button */
+.popular-categories__see-all {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 18px;
+}
+
+.popular-categories__see-all-text {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 100%;
+  color: #5826b2;
+}
+
+.popular-categories__see-all-arrow {
+  width: 7px;
+  height: 12px;
+  display: block;
+}
+
+.popular-categories__see-all:focus-visible {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Icons row — justify between so 5 items spread evenly across full width */
+.popular-categories__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Each category item: icon + label */
+.popular-categories__item {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 70px;
+}
+
+/* Icon container */
+.popular-categories__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  background: #e6edfa;
+  border: 1px solid #e1d1ff;
+  flex-shrink: 0;
+}
+
+.popular-categories__icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* Label */
+.popular-categories__label {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: rgba(34, 34, 34, 0.65);
+  width: 70px;
+  height: 17px;
+  white-space: nowrap;
+}
+
+.popular-categories__item:focus-visible .popular-categories__icon-wrapper {
+  outline: 2px solid #5826b2;
+  outline-offset: 2px;
+}
